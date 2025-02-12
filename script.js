@@ -3,11 +3,11 @@ window.onload = function() {
 
     // Make the folder draggable
     folders.forEach(folder => {
+        folder.style.position = "absolute"; // Ensure folders are positioned absolutely
         folder.onmousedown = (e) => {
             let offsetX = e.clientX - folder.getBoundingClientRect().left;
             let offsetY = e.clientY - folder.getBoundingClientRect().top;
 
-            // When the user moves the mouse, update the folder position
             document.onmousemove = (e) => {
                 const x = e.clientX - offsetX;
                 const y = e.clientY - offsetY;
@@ -15,7 +15,6 @@ window.onload = function() {
                 folder.style.top = `${y}px`;
             };
 
-            // Stop moving the folder when the user releases the mouse button
             document.onmouseup = () => {
                 document.onmousemove = null;
                 document.onmouseup = null;
