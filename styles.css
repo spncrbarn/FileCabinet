@@ -10,9 +10,9 @@ body {
 .folder {
     cursor: pointer;
     position: absolute;  /* To allow them to move around */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow effect for depth */
+    background-color: transparent; /* Make sure there's no background */
     border: none;  /* Remove any border */
-    background-color: transparent; /* Make sure the background is transparent */
+    box-shadow: none; /* Remove any shadow */
 }
 
 .folder img {
