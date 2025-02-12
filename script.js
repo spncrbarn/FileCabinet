@@ -13,18 +13,22 @@ window.onload = function() {
     const clock = document.getElementById('clock');
     function updateClock() {
         const now = new Date();
-        let hours = now.getHours();
+        let hours = now.getHours();  // Get hours in 24-hour format
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
         
-        // Convert to 12-hour format and determine AM/PM
+        // Determine AM/PM
         const ampm = hours >= 12 ? 'PM' : 'AM';
+        
+        // Convert to 12-hour format
         hours = hours % 12;
-        hours = hours ? hours : 12; // 0 should be 12
+        hours = hours ? hours : 12;  // The hour '0' should be '12'
+
+        // Format time with leading zeros for minutes and seconds
         const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
         const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
 
-        clock.textContent = `${hours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
+        clock.textContent = `${hours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;  // Regular time with AM/PM
     }
     
     // Update the clock every second
