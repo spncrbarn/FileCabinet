@@ -24,3 +24,16 @@ body {
 .folder:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+#clock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
