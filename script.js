@@ -36,3 +36,9 @@ window.onload = function() {
     // Call the function once to display immediately
     updateClock();
 };
+
+// Function to refresh the page
+function refreshPage() {
+    location.reload();  // Reload the page
+}
+
