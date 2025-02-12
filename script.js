@@ -7,3 +7,4 @@ window.onload = function() {
         folder.style.left = `${randomLeft}px`;
     });
 };
+<img src="https://oklama.com/_next/static/media/default.0302e2ab.png" alt="https://oklama.com/_next/static/media/default.0302e2ab.png" class="transparent">
