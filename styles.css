@@ -1,4 +1,4 @@
-bbody {
+body {
     background-color: white;  /* White background */
     margin: 0;
     padding: 0;
@@ -32,9 +32,10 @@ bbody {
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     color: black;
-    background-color: white;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: transparent; /* Remove background color */
 }
+
 
