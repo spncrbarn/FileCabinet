@@ -34,3 +34,20 @@ window.onload = function() {
         };
     });
 };
+window.onload = function() {
+    const clock = document.getElementById('clock');
+
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        clock.textContent = `${hours} ${minutes} ${seconds}`;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Call the function once to display immediately
+    updateClock();
+};
