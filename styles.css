@@ -29,11 +29,11 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-family: 'Courier New', monospace;  /* Use a monospaced font */
-    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;  /* Use a monospaced font */
+    font-size: 12px;
     color: black;
-    padding: 5px;
-    background-color: transparent;  /* Remove background */
+    padding: 0px;
+    background-color: none;  /* Remove background */
     box-shadow: none;  /* Remove shadow */
 }
 
