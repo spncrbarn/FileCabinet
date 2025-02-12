@@ -20,9 +20,9 @@ body {
 }
 
 .folder-text {
-    margin-top: 8px; /* Space between the folder image and text */
-    font-size: 14px;
-    color: black;  /* Make the text black */
+    margin-top: 6px; /* Space between the folder image and text */
+    font-size: 10px;
+    color: gray;  /* Make the text gray */
     font-weight: thin;
     display: block;
 }
