@@ -1,23 +1,35 @@
 window.onload = function() {
     const folders = document.querySelectorAll('.folder');
 
-    // Make the folder draggable
     folders.forEach(folder => {
-        folder.style.position = "absolute"; // Ensure folders are positioned absolutely
-        folder.onmousedown = (e) => {
-            let offsetX = e.clientX - folder.getBoundingClientRect().left;
-            let offsetY = e.clientY - folder.getBoundingClientRect().top;
+        let isDragging = false;
+        let offsetX, offsetY;
 
-            document.onmousemove = (e) => {
-                const x = e.clientX - offsetX;
-                const y = e.clientY - offsetY;
-                folder.style.left = `${x}px`;
-                folder.style.top = `${y}px`;
+        folder.onmousedown = function(e) {
+            isDragging = true;
+            offsetX = e.clientX - folder.getBoundingClientRect().left;
+            offsetY = e.clientY - folder.getBoundingClientRect().top;
+
+            // Prevent text selection
+            document.body.style.userSelect = "none";
+
+            document.onmousemove = function(e) {
+                if (isDragging) {
+                    const x = e.clientX - offsetX;
+                    const y = e.clientY - offsetY;
+
+                    folder.style.left = `${x}px`;
+                    folder.style.top = `${y}px`;
+                }
             };
 
-            document.onmouseup = () => {
+            document.onmouseup = function() {
+                isDragging = false;
                 document.onmousemove = null;
                 document.onmouseup = null;
+
+                // Allow text selection again
+                document.body.style.userSelect = "auto";
             };
         };
     });
