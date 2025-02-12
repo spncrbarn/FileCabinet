@@ -3,25 +3,21 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.folder {
-    width: 150px;
-    height: 100px;
-    background-color: #f4e1a1; /* Manilla color */
-    color: black;
-    text-align: center;
-    line-height: 100px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    position: absolute;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+a {
+    display: block;
+    width: 150px; /* Adjust this size to match your image size */
+    height: 100px; /* Adjust this size to match your image size */
 }
 
-.folder:hover {
-    background-color: #f0c200;
+img.folder {
+    width: 100%;
+    height: auto;
+    border: none;
+    display: block;
 }
