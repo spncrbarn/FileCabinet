@@ -23,6 +23,6 @@ body {
     margin-top: 10px; /* Space between the folder image and text */
     font-size: 16px;
     color: black;  /* Make the text black */
-    font-weight: thin;
+    font-weight: bold;
     display: block;
 }
