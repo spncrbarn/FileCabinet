@@ -20,3 +20,10 @@ img.folder {
     border: none;
     display: block;
 }
+
+.folder-text {
+    margin-top: 10px; /* Space between the folder image and text */
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
