@@ -3,16 +3,15 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     overflow: hidden;
 }
 
 a {
     display: block;
-    width: 150px; /* Adjust this size to match your image size */
-    height: 100px; /* Adjust this size to match your image size */
+    width: 150px; /* Adjust to match your image size */
+    height: 100px; /* Adjust to match your image size */
+    position: absolute; /* Important for random placement */
 }
 
 img.folder {
