@@ -7,23 +7,22 @@ body {
     overflow: hidden;
 }
 
-a {
-    display: block;
-    width: 150px; /* Adjust to match your image size */
-    height: 100px; /* Adjust to match your image size */
-    position: absolute; /* Important for random placement */
+.folder-container {
+    position: absolute; /* Keep this for random movement */
+    text-align: center;
 }
 
-img.folder {
-    width: 100%;
-    height: auto;
-    border: none;
+.folder {
+    width: 150px; /* Adjust to match your image size */
+    height: 100px; /* Adjust to match your image size */
     display: block;
+    border: none;
 }
 
 .folder-text {
     margin-top: 10px; /* Space between the folder image and text */
     font-size: 16px;
-    color: black;
+    color: black;  /* Make the text black */
     font-weight: bold;
+    display: block;
 }
