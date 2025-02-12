@@ -1,25 +1,8 @@
 window.onload = function() {
     const folders = document.querySelectorAll('.folder');
-    const folderLinks = [
-        'https://www.example1.com',
-        'https://www.example2.com',
-        'https://www.example3.com',
-        'https://www.example4.com',
-    ];
 
-    // Assign random positions to each folder on page load
-    folders.forEach((folder, index) => {
-        const randomTop = Math.random() * (window.innerHeight - 100);
-        const randomLeft = Math.random() * (window.innerWidth - 150);
-        folder.style.top = `${randomTop}px`;
-        folder.style.left = `${randomLeft}px`;
-
-        // Add click functionality to each folder
-        folder.onclick = () => {
-            window.location.href = folderLinks[index];
-        };
-
-        // Make the folder draggable
+    // Make the folder draggable
+    folders.forEach(folder => {
         folder.onmousedown = (e) => {
             let offsetX = e.clientX - folder.getBoundingClientRect().left;
             let offsetY = e.clientY - folder.getBoundingClientRect().top;
