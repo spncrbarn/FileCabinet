@@ -19,10 +19,3 @@ body {
     border: none;
 }
 
-.folder-text {
-    margin-top: 6px; /* Space between the folder image and text */
-    font-size: 10px;
-    color: gray;  /* Make the text gray */
-    font-weight: thin;
-    display: block;
-}
