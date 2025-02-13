@@ -64,10 +64,11 @@ window.onload = function() {
     updateClock();
 };
 
-// Function to refresh the page
-function refreshPage() {
-    location.reload();  // Reload the page
-}
+// Function to refresh the page when the window is resized
+window.onresize = function() {
+    location.reload();
+};
+
 
 
 
