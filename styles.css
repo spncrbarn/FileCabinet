@@ -64,18 +64,18 @@ body {
     color: white; /* White text for about page */
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
 }
 
 /* Content Styling */
 .content {
     max-width: 600px;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     font-family: 'JetBrains Mono', monospace;
-    color: black;
+    color: white;
 }
 
 /* Link Styling */
