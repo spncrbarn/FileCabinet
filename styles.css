@@ -37,6 +37,14 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
     color: black;
+    text-decoration: none;  /* Remove underline */
+    cursor: pointer; /* Indicate it's clickable */
+    padding: 5px; /* Add padding for easier clicking */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+#clock:hover {
+    text-decoration: none;
 }
 
 /* General Black Background Styling for Other Pages */
