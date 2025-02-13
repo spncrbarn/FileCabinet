@@ -9,11 +9,6 @@ body {
     color: black;
 }
 
-/* Hide Thumbnail Image and Text */
-.thumbnail-image {
-    display: none;  /* This hides the image if it is currently showing */
-}
-
 /* Folder Styling */
 .folder {
     cursor: pointer;
@@ -21,7 +16,6 @@ body {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    transition: top 0.5s ease, left 0.5s ease; /* Smooth transition for movement */
 }
 
 .folder img {
@@ -81,6 +75,14 @@ body {
     color: white;
 }
 
+/* Poetry Page Content */
+.poetry-content {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+}
 /* Link Styling */
 .about-content h1 a,
 .poetry-content a {
@@ -92,6 +94,35 @@ body {
 .poetry-content a:hover {
     text-decoration: underline;
 }
+
+/* Image Styling */
+.about-image, .display-image {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: block;
+    margin-left: center;
+    margin-right: center;
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-arrow:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+
 
 
 
