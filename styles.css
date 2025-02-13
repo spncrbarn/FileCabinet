@@ -103,8 +103,8 @@ body {
     margin-top: 20px;
     border-radius: 10px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: center;
+    margin-right: center;
 }
 
 /* Back Arrow Styling */
