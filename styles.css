@@ -21,6 +21,7 @@ body {
     background-color: transparent;
     border: none;
     box-shadow: none;
+    transition: top 0.5s ease, left 0.5s ease; /* Smooth transition for movement */
 }
 
 .folder img {
