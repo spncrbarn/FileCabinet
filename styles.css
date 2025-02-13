@@ -9,6 +9,11 @@ body {
     color: black;
 }
 
+/* Hide Thumbnail Image and Text */
+.thumbnail-image {
+    display: none;  /* This hides the image if it is currently showing */
+}
+
 /* Folder Styling */
 .folder {
     cursor: pointer;
@@ -83,7 +88,10 @@ body {
 }
 
 .about-content h1 a:hover,
-.poetry-co
+.poetry-content a:hover {
+    text-decoration: underline;
+}
+
 
 
 
