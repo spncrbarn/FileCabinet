@@ -9,6 +9,15 @@ body {
     color: black;
 }
 
+/* Thumbnail Image Styling */
+.thumbnail-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
 /* Folder Styling */
 .folder {
     cursor: pointer;
@@ -113,6 +122,7 @@ body {
     color: #4CAF50;
     text-decoration: underline;
 }
+
 
 
 
