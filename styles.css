@@ -9,16 +9,6 @@ body {
     color: black;
 }
 
-/* Thumbnail Image Styling (Not background, displayed at top) */
-.thumbnail-image {
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 20px; /* Adds space between top of the page and thumbnail */
-}
-
 /* Folder Styling */
 .folder {
     cursor: pointer;
