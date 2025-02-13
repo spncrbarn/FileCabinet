@@ -9,13 +9,14 @@ body {
     color: black;
 }
 
-/* Thumbnail Image Styling */
+/* Thumbnail Image Styling (Not background, displayed at top) */
 .thumbnail-image {
     width: 100%;
     height: auto;
     max-width: 1200px;
     margin: 0 auto;
     display: block;
+    margin-top: 20px; /* Adds space between top of the page and thumbnail */
 }
 
 /* Folder Styling */
@@ -92,36 +93,8 @@ body {
 }
 
 .about-content h1 a:hover,
-.poetry-content a:hover {
-    text-decoration: underline;
-}
+.poetry-co
 
-/* Image Styling */
-.about-image, .display-image {
-    width: 200px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    display: block;
-    margin-left: center;
-    margin-right: center;
-}
-
-/* Back Arrow Styling */
-.back-arrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.back-arrow:hover {
-    color: #4CAF50;
-    text-decoration: underline;
-}
 
 
 
