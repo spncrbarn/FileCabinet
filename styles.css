@@ -116,6 +116,42 @@ body {
     text-decoration: underline;
 }
 
+/* Poetry Page Styling */
+.black-background {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.content {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+}
+
+ul {
+    list-style-type: none;  /* Remove bullet points */
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4CAF50;  /* Greenish-blue color */
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
 
 
 
