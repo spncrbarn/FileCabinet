@@ -1,6 +1,6 @@
 /* Home Page Styling (White Background) */
 body {
-    background-color: white;
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -35,7 +35,7 @@ body {
     right: 10px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
-    color: black;
+    color: white;
 }
 
 /* General Black Background Styling for Other Pages */
