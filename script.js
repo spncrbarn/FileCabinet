@@ -59,7 +59,7 @@ window.onload = function () {
         }, 300); // Adding debounce for better performance
     };
 
-    // Clock setup
+        // Clock setup
     const clock = document.getElementById("clock");
     function updateClock() {
         const now = new Date();
@@ -73,8 +73,12 @@ window.onload = function () {
 
     setInterval(updateClock, 1000);
     updateClock();
-};
 
+    // Make clock clickable and redirect on click
+    clock.addEventListener("click", function () {
+        window.location.href = "https://github.com/spncrbarn/FileCabinet";
+    });
+};
 
 
 
