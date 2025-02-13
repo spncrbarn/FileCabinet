@@ -131,6 +131,13 @@ body {
     }
 }
 
+/* Apply gradient color animation specifically for the About page link */
+.about-content h1 a {
+    text-decoration: none;
+    color: #8A2BE2; /* Starting color */
+    animation: gradientColor 4s ease infinite;
+}
+
 
 
 
