@@ -16,6 +16,7 @@ body {
     background-color: transparent;
     border: none;
     box-shadow: none;
+    will-change: transform, top, left; /* Optimized rendering for folder movement */
 }
 
 .folder img {
@@ -137,6 +138,7 @@ body {
     color: #8A2BE2; /* Starting color */
     animation: gradientColor 4s ease infinite;
 }
+
 
 
 
