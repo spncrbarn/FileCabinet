@@ -72,9 +72,12 @@ body {
 .about-content h1 a,
 .poetry-content a {
     text-decoration: none;
+    font-weight: bold;
     color: #4CAF50;
+    animation: gradientColor 4s ease infinite; /* Apply the gradient color animation */
 }
 
+/* Link Hover Effect */
 .about-content h1 a:hover,
 .poetry-content a:hover {
     text-decoration: underline;
@@ -108,6 +111,26 @@ body {
     color: #4CAF50;
     text-decoration: underline;
 }
+
+/* Add Keyframes Animation for Link Color */
+@keyframes gradientColor {
+    0% {
+        color: #8A2BE2; /* Start with purple */
+    }
+    25% {
+        color: #FF6347; /* Change to tomato */
+    }
+    50% {
+        color: #3CB371; /* Change to medium sea green */
+    }
+    75% {
+        color: #1E90FF; /* Change to dodger blue */
+    }
+    100% {
+        color: #8A2BE2; /* Back to purple */
+    }
+}
+
 
 
 
