@@ -123,24 +123,5 @@ body {
     text-decoration: underline;
 }
 
-/* Poetry List Styling */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #4CAF50;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
 
 
