@@ -1,16 +1,40 @@
 window.onload = function() {
     const folders = document.querySelectorAll('.folder');
+    const speed = 2; // Speed of folder movement
+    
+    // Initialize folder positions and velocities
+    const folderPositions = Array.from(folders).map(() => ({
+        top: Math.random() * (window.innerHeight - 100),
+        left: Math.random() * (window.innerWidth - 150),
+        velocityX: Math.random() * speed + 1, // Horizontal speed
+        velocityY: Math.random() * speed + 1, // Vertical speed
+    }));
 
-    // Delay randomization slightly for smoother load
-    setTimeout(() => {
-        // Randomly place the folders within the visible area
-        folders.forEach(folder => {
-            const randomTop = Math.random() * (window.innerHeight - 100); // Adjust to allow space for images
-            const randomLeft = Math.random() * (window.innerWidth - 150); // Adjust to keep inside window
-            folder.style.top = `${randomTop}px`;
-            folder.style.left = `${randomLeft}px`;
+    function moveFolders() {
+        folders.forEach((folder, index) => {
+            // Get the current position and velocity of the folder
+            const position = folderPositions[index];
+
+            // Update the folder position
+            position.top += position.velocityY;
+            position.left += position.velocityX;
+
+            // Check for collision with the window edges and reverse velocity if necessary
+            if (position.top <= 0 || position.top >= window.innerHeight - 100) {
+                position.velocityY = -position.velocityY;  // Reverse vertical direction
+            }
+            if (position.left <= 0 || position.left >= window.innerWidth - 150) {
+                position.velocityX = -position.velocityX;  // Reverse horizontal direction
+            }
+
+            // Apply the new position to the folder
+            folder.style.top = `${position.top}px`;
+            folder.style.left = `${position.left}px`;
         });
-    }, 100); // 100ms delay for smoother animation
+    }
+
+    // Call the moveFolders function every 10ms for smooth movement
+    setInterval(moveFolders, 10);
 
     // Set up the clock
     const clock = document.getElementById('clock');
@@ -44,5 +68,6 @@ window.onload = function() {
 function refreshPage() {
     location.reload();  // Reload the page
 }
+
 
 
