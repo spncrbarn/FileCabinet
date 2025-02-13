@@ -64,16 +64,16 @@ body {
     color: white; /* White text for about page */
     height: 100vh;
     display: flex;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    text-align: center;  /* Center the text */
+    padding: 20px;  /* Add some padding */
 }
 
 /* Content Styling */
 .content {
     max-width: 600px;
     padding: 20px;
-    text-align: left;
     font-family: 'JetBrains Mono', monospace;
     color: white;
 }
@@ -94,7 +94,28 @@ body {
     height: auto;
     margin-top: 20px;
     border-radius: 10px; /* Optional: Rounded corners */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* Back Arrow Styling */
+.back-arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    color: white;  /* White color for the back arrow */
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;  /* Make sure it's above other content */
+}
+
+.back-arrow:hover {
+    color: #4CAF50; /* Green color on hover */
+    text-decoration: underline;
+}
+
 
 
 
