@@ -53,6 +53,30 @@ body {
     color: #4CAF50;          /* Change text color on hover */
 }
 
+.content {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    font-family: 'JetBrains Mono', monospace;
+    color: black;
+}
+
+.content h1 a {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+}
+
+.content h1 a:hover {
+    text-decoration: underline;
+}
+
+.about-image {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
 
 
 
