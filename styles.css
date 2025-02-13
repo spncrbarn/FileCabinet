@@ -1,31 +1,31 @@
 /* Home Page Styling (White Background) */
 body {
-    background-color: white;  /* White background for home page */
+    background-color: white;
     margin: 0;
     padding: 0;
     height: 100vh;
     position: relative;
     font-family: 'JetBrains Mono', monospace;
-    color: black; /* Black text for home page */
+    color: black;
 }
 
 /* Folder Styling */
 .folder {
     cursor: pointer;
-    position: absolute;  /* To allow them to move around */
-    background-color: transparent; /* Make sure there's no background */
-    border: none;  /* Remove any border */
-    box-shadow: none; /* Remove any shadow */
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .folder img {
-    width: 150px;  /* Set the folder image size */
-    height: 100px; /* Set the folder image size */
-    display: block;  /* Removes any space below the image */
+    width: 150px;
+    height: 100px;
+    display: block;
 }
 
 .folder:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
 /* Clock Styling */
@@ -36,9 +36,6 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
     color: black;
-    padding: 0px;
-    background-color: none;  /* Remove background */
-    box-shadow: none;  /* Remove shadow */
 }
 
 /* Refresh Button Styling */
@@ -46,54 +43,65 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    font-family: 'JetBrains Mono', monospace;  /* Use JetBrains Mono font */
-    font-size: 12px;  /* Adjust the size of the text */
-    color: black;     /* Text color */
-    cursor: pointer;  /* Make it clickable */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
     transition: transform 0.2s ease;
 }
 
 #refresh-text:hover {
-    transform: scale(1.1);  /* Slight zoom effect on hover */
-    color: #4CAF50;          /* Change text color on hover */
+    transform: scale(1.1);
+    color: #4CAF50;
 }
 
-/* About Page Styling (Black Background) */
+/* General Black Background Styling for Other Pages */
 .black-background {
-    background-color: black;  /* Black background for about page */
-    color: white; /* White text for about page */
+    background-color: black;
+    color: white;
     height: 100vh;
     display: flex;
-    justify-content: center;  /* Center content horizontally */
-    align-items: center;  /* Center content vertically */
-    text-align: center;  /* Center the text */
-    padding: 20px;  /* Add some padding */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Content Styling */
-.content {
+/* About Page Content */
+.about-content {
     max-width: 600px;
     padding: 20px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+}
+
+/* Poetry Page Content */
+.poetry-content {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
     font-family: 'JetBrains Mono', monospace;
     color: white;
 }
 
 /* Link Styling */
-.content h1 a {
+.about-content h1 a,
+.poetry-content a {
     text-decoration: none;
-    color: #4CAF50; /* Greenish-blue color */
+    color: #4CAF50;
 }
 
-.content h1 a:hover {
+.about-content h1 a:hover,
+.poetry-content a:hover {
     text-decoration: underline;
 }
 
 /* Image Styling */
-.about-image {
-    width: 200px; /* Adjust size as needed */
+.about-image, .display-image {
+    width: 200px;
     height: auto;
     margin-top: 20px;
-    border-radius: 10px; /* Optional: Rounded corners */
+    border-radius: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -103,40 +111,21 @@ body {
 .back-arrow {
     font-family: 'JetBrains Mono', monospace;
     font-size: 20px;
-    color: white;  /* White color for the back arrow */
+    color: white;
     text-decoration: none;
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 1;  /* Make sure it's above other content */
 }
 
 .back-arrow:hover {
-    color: #4CAF50; /* Green color on hover */
+    color: #4CAF50;
     text-decoration: underline;
 }
 
-/* Poetry Page Styling */
-.black-background {
-    background-color: black;
-    color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-
-.content {
-    max-width: 600px;
-    padding: 20px;
-    text-align: left;
-    font-family: 'JetBrains Mono', monospace;
-    color: white;
-}
-
+/* Poetry List Styling */
 ul {
-    list-style-type: none;  /* Remove bullet points */
+    list-style-type: none;
     padding: 0;
 }
 
@@ -146,13 +135,12 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #4CAF50;  /* Greenish-blue color */
+    color: #4CAF50;
 }
 
 ul li a:hover {
     text-decoration: underline;
 }
-
 
 
 
