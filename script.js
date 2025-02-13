@@ -1,6 +1,6 @@
-window.onload = function() {
-    const folders = document.querySelectorAll('.folder');
-    const speed = 0.5;
+window.onload = function () {
+    const folders = document.querySelectorAll(".folder");
+    const speed = 1; // Increased speed for smoother motion
 
     const folderPositions = Array.from(folders).map((folder) => {
         const position = {
@@ -11,6 +11,7 @@ window.onload = function() {
         };
 
         // Apply the initial randomized position immediately
+        folder.style.position = "absolute";
         folder.style.top = `${position.top}px`;
         folder.style.left = `${position.left}px`;
 
@@ -36,33 +37,34 @@ window.onload = function() {
         });
     }
 
-    setInterval(moveFolders, 10);
+    setInterval(moveFolders, 20); // Smooth movement with a slightly longer interval
 
-    // Set up clock
-    const clock = document.getElementById('clock');
+    // Clock setup
+    const clock = document.getElementById("clock");
     function updateClock() {
         const now = new Date();
         let hours = now.getHours();
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
+        const ampm = hours >= 12 ? "PM" : "AM";
         hours = hours % 12 || 12;
-        const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
-        const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
-        clock.textContent = `${hours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
+        clock.textContent = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${ampm}`;
     }
 
     setInterval(updateClock, 1000);
     updateClock();
 };
 
-// Prevent infinite reloading on resize (adds a delay)
+// **Fix: Reposition folders on resize instead of full reload**
 let resizeTimeout;
-window.onresize = function() {
+window.onresize = function () {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        location.reload();
-    }, 500); // 500ms delay to avoid excessive reloading
+        document.querySelectorAll(".folder").forEach(folder => {
+            folder.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
+            folder.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+        });
+    }, 300); // 300ms debounce for better performance
 };
 
 
