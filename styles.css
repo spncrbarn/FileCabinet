@@ -1,12 +1,15 @@
+/* Home Page Styling (White Background) */
 body {
-    background-color: white;  /* White background */
+    background-color: white;  /* White background for home page */
     margin: 0;
     padding: 0;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    color: black; /* Black text for home page */
 }
 
+/* Folder Styling */
 .folder {
     cursor: pointer;
     position: absolute;  /* To allow them to move around */
@@ -25,6 +28,7 @@ body {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* Clock Styling */
 #clock {
     position: absolute;
     top: 10px;
@@ -37,6 +41,7 @@ body {
     box-shadow: none;  /* Remove shadow */
 }
 
+/* Refresh Button Styling */
 #refresh-text {
     position: fixed;
     bottom: 10px;
@@ -53,30 +58,43 @@ body {
     color: #4CAF50;          /* Change text color on hover */
 }
 
-.content {
+/* About Page Styling (Black Background) */
+.black-background {
+    background-color: black;  /* Black background for about page */
+    color: white; /* White text for about page */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 50px auto;
+}
+
+/* Content Styling */
+.content {
     max-width: 600px;
+    padding: 20px;
+    text-align: center;
     font-family: 'JetBrains Mono', monospace;
     color: black;
 }
 
+/* Link Styling */
 .content h1 a {
     text-decoration: none;
-    color: #007bff; /* Blue link color */
+    color: #4CAF50; /* Greenish-blue color */
 }
 
 .content h1 a:hover {
     text-decoration: underline;
 }
 
+/* Image Styling */
 .about-image {
-    width: 200px; /* Adjust as needed */
+    width: 200px; /* Adjust size as needed */
     height: auto;
     margin-top: 20px;
     border-radius: 10px; /* Optional: Rounded corners */
 }
-
 
 
 
