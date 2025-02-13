@@ -1,6 +1,6 @@
 window.onload = function () {
     const folders = document.querySelectorAll(".folder");
-    const speed = 1; // Increased speed for smoother motion
+    const speed = 1;
 
     const folderPositions = Array.from(folders).map((folder) => {
         const position = {
@@ -25,6 +25,7 @@ window.onload = function () {
             position.top += position.velocityY;
             position.left += position.velocityX;
 
+            // Constrain movement within bounds
             if (position.top <= 0 || position.top >= window.innerHeight - 100) {
                 position.velocityY *= -1;
             }
@@ -37,7 +38,20 @@ window.onload = function () {
         });
     }
 
-    setInterval(moveFolders, 20); // Smooth movement with a slightly longer interval
+    setInterval(moveFolders, 20);
+
+    // Handle resize event to prevent overflowing folders
+    let resizeTimeout;
+    window.onresize = function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Re-position folders to stay within bounds on resize
+            document.querySelectorAll(".folder").forEach(folder => {
+                folder.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
+                folder.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+            });
+        }, 300); // Adding debounce for better performance
+    };
 
     // Clock setup
     const clock = document.getElementById("clock");
@@ -55,17 +69,6 @@ window.onload = function () {
     updateClock();
 };
 
-// **Fix: Reposition folders on resize instead of full reload**
-let resizeTimeout;
-window.onresize = function () {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        document.querySelectorAll(".folder").forEach(folder => {
-            folder.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
-            folder.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
-        });
-    }, 300); // 300ms debounce for better performance
-};
 
 
 
