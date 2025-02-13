@@ -64,6 +64,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;  /* Ensures the back arrow stays positioned properly */
 }
 
 /* About Page Content */
@@ -83,6 +84,7 @@ body {
     font-family: 'JetBrains Mono', monospace;
     color: white;
 }
+
 /* Link Styling */
 .about-content h1 a,
 .poetry-content a {
@@ -97,13 +99,14 @@ body {
 
 /* Image Styling */
 .about-image, .display-image {
-    width: 200px;
-    height: auto;
+    max-width: 90%;  /* Ensure the image does not take up the entire width */
+    max-height: 80vh; /* Limit the height of the image */
     margin-top: 20px;
     border-radius: 10px;
     display: block;
-    margin-left: center;
-    margin-right: center;
+    object-fit: contain;  /* Ensure the image keeps its aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Back Arrow Styling */
@@ -115,12 +118,14 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
+    z-index: 10;  /* Ensure the back arrow is above the image */
 }
 
 .back-arrow:hover {
     color: #4CAF50;
     text-decoration: underline;
 }
+
 
 
 
