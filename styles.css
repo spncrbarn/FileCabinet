@@ -75,15 +75,6 @@ body {
     color: white;
 }
 
-/* Poetry Page Content */
-.poetry-content {
-    max-width: 600px;
-    padding: 20px;
-    text-align: left;
-    font-family: 'JetBrains Mono', monospace;
-    color: white;
-}
-
 /* Link Styling */
 .about-content h1 a,
 .poetry-content a {
