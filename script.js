@@ -2,6 +2,7 @@ window.onload = function () {
     const folders = document.querySelectorAll(".folder");
     const speed = 1;
 
+    // Initialize folder positions and velocities
     const folderPositions = Array.from(folders).map((folder) => {
         const position = {
             top: Math.random() * (window.innerHeight - 100),
@@ -10,7 +11,6 @@ window.onload = function () {
             velocityY: (Math.random() - 0.5) * speed * 2,
         };
 
-        // Apply the initial randomized position immediately
         folder.style.position = "absolute";
         folder.style.top = `${position.top}px`;
         folder.style.left = `${position.left}px`;
@@ -18,10 +18,12 @@ window.onload = function () {
         return position;
     });
 
+    // Function to move folders while respecting bounds
     function moveFolders() {
         folders.forEach((folder, index) => {
             const position = folderPositions[index];
 
+            // Update position based on velocity
             position.top += position.velocityY;
             position.left += position.velocityX;
 
@@ -38,17 +40,21 @@ window.onload = function () {
         });
     }
 
+    // Run the folder movement in intervals
     setInterval(moveFolders, 20);
 
-    // Handle resize event to prevent overflowing folders
+    // Handle resizing to adjust folder positions, but don't reset velocities
     let resizeTimeout;
     window.onresize = function () {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            // Re-position folders to stay within bounds on resize
-            document.querySelectorAll(".folder").forEach(folder => {
-                folder.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
-                folder.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+            // Recalculate folder positions only within the new bounds
+            folderPositions.forEach((position, index) => {
+                position.top = Math.min(position.top, window.innerHeight - 100);
+                position.left = Math.min(position.left, window.innerWidth - 150);
+                // Optionally reset position to stay within bounds after resize
+                folders[index].style.top = `${position.top}px`;
+                folders[index].style.left = `${position.left}px`;
             });
         }, 300); // Adding debounce for better performance
     };
@@ -68,6 +74,7 @@ window.onload = function () {
     setInterval(updateClock, 1000);
     updateClock();
 };
+
 
 
 
