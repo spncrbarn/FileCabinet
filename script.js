@@ -1,6 +1,6 @@
 window.onload = function() {
     const folders = document.querySelectorAll('.folder');
-    const speed = 1; // Speed of folder movement
+    const speed = 0.5; // Speed of folder movement
     
     // Initialize folder positions and velocities
     const folderPositions = Array.from(folders).map(() => ({
