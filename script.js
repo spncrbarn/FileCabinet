@@ -76,7 +76,7 @@ window.onload = function () {
 
     // Make clock clickable and redirect on click
     clock.addEventListener("click", function () {
-        window.location.href = "https://github.com/spncrbarn/FileCabinet";
+        window.location.href = "file:///Users/spencerbarnhill/Desktop/BAC5FA2B-6D79-49C0-92D0-97E1110B809F.png";
     });
 };
 
