@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Cabinet</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Favicon for all pages -->
-    <link rel="icon" href="static/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="static/favicon/favicon.png" type="image/png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Time has moved</title>
+<meta http-equiv="refresh" content="0; url=https://opentime.work/">
+<link rel="canonical" href="https://opentime.work/">
+<script>
+  // clear the old offline copy so this address stops showing the app
+  if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+  if (window.caches) caches.keys().then(ks => ks.forEach(k => caches.delete(k)));
+  location.replace('https://opentime.work/');
+</script>
+<style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;background:#EDF0EE;color:#1C2427}a{color:#3564D6}</style>
 </head>
-<body>
-    <!-- Folder divs, each with its respective link -->
-    <div class="folder" onclick="window.location.href='https://barnhill.carrd.co/';">
-        <img src="folder 1.png" alt="Folder 1">
-    </div>
-    <div class="folder" onclick="window.location.href='https://spencerbarnhill.substack.com/';">
-        <img src="folder 2.png" alt="Folder 2">
-    </div>
-    <div class="folder" onclick="window.location.href='https://music.apple.com/us/album/sojourn-ep/6789207941';">
-        <img src="folder 3.png" alt="Folder 3">
-    </div>
-    <div class="folder" onclick="window.location.href='https://linktr.ee/spncrbarn';">
-        <img src="envelope.png" alt="Folder 4">
-    </div>
-
-    <!-- Clock div in the top-right corner -->
-    <div id="clock"></div>
-    <a id="clock" href="https://github.com/spncrbarn/FileCabinet" target="_blank"></a>
-
-    <!-- JavaScript for randomizing folder position and updating clock -->
-    <script src="script.js"></script>
-</body>
+<body><p>Open Time has moved to <a href="https://opentime.work/">opentime.work</a>.</p></body>
 </html>
-
-
